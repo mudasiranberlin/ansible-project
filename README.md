@@ -7,3 +7,9 @@
 6. # restarting sshd in the default instance launch configuration.
 make this like this : #PasswordAuthentication no
 make this one also: PermitEmptyPasswords yes
+now restart : sudo service sshd restart
+# Now do the same thing with oter machines as well 
+# After that install
+sudo yum install python3 -y
+pip3 install ansible --user
+sudo yum -y install python3-pip
