@@ -24,3 +24,11 @@ ssh-copy-id ansible@172.31.22.200     [ip you have to paste the private ip of th
 
 # check all nodes working 
 ansible all -m ping|
+# then go back
+cd ..
+then go to cd ansible
+ls // check files 
+# create ansible files playbook yml file 
+vi first-playbook.yml
+# run it 
+ansible-playbook first-playbook.yml
