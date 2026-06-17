@@ -11,5 +11,16 @@ now restart : sudo service sshd restart
 # Now do the same thing with oter machines as well 
 # After that install
 sudo yum install python3 -y
-pip3 install ansible --user
 sudo yum -y install python3-pip
+pip3 install ansible --user
+
+# create a directory 
+sudo mkdir /etc/ansible
+sudo su ansible 
+
+ssh-keygen
+sudo vi /etc/ansible/hosts    //       [demo] 172.1.12.3  write private ip 
+ssh-copy-id ansible@172.31.22.200     [ip you have to paste the private ip of the nodes    // if u have 4 paste 4 times ]
+
+# check all nodes working 
+ansible all -m ping|
