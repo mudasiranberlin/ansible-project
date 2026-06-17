@@ -18,9 +18,10 @@ pip3 install ansible --user
 sudo mkdir /etc/ansible
 sudo su ansible 
 
-ssh-keygen
+ssh-keygen    // create trust relationship and make sure u have the ansible user that time  // will not ask password after using this command 
+ssh-copy-id ansible@172.31.22.200     [ip you have to paste the private ip of the nodes    // if u have 4 paste 4 times ] // now if u want to push code it will execute without asking password 
 sudo vi /etc/ansible/hosts    //       [demo] 172.1.12.3  write private ip 
-ssh-copy-id ansible@172.31.22.200     [ip you have to paste the private ip of the nodes    // if u have 4 paste 4 times ]
+
 
 # check all nodes working 
 ansible all -m ping|
@@ -32,3 +33,12 @@ ls // check files
 vi first-playbook.yml
 # run it 
 ansible-playbook first-playbook.yml
+
+# if you want to login node on your ansible server simple use 
+
+ssh 172.31.22.209  //private ip you have to mention here 
+
+to exit from node simple use exit
+
+
+
