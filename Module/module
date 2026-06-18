@@ -1,0 +1,10 @@
+install using Module file 
+
+ansible demo -b -m yum -a "pkg=tree state=present"
+
+uninstall using Module file
+
+ansible demo -b -m yum -a "pkg=tree state=absent"
+
+update using the Module file 
+
