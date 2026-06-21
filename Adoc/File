@@ -17,3 +17,4 @@ install for paticular group
 
 ansible demo -a "yum install tree -y"
 
+# install for the group 
