@@ -1,0 +1,11 @@
+--- # My Second Yml file 
+- hosts: demo
+  remote_user: ansible
+  become: yes
+  connection: ssh
+
+  tasks:
+    - name: Install HTTPD on CentOS 7
+      yum:
+        name: httpd
+        state: present

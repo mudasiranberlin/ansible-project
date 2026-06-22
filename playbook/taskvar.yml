@@ -1,0 +1,14 @@
+- name: My Third Tasks
+  hosts: demo
+  remote_user: ansible
+  become: yes
+  connection: ssh
+
+  vars:
+    pkgname: httpd
+
+  tasks:
+    - name: Install HTTPD server on CentOS 7
+      yum:
+        name: "{{ pkgname }}"
+        state: present 

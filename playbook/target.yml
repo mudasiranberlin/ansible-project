@@ -1,0 +1,7 @@
+--- # My First Ymal
+- hosts: demo
+  user: ansibble
+  become: yes
+  connection: ssh
+  gather_facts: yes
+

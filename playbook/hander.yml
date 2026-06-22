@@ -1,0 +1,19 @@
+---
+- name: My handler project
+  hosts: demo
+  remote_user: ansible
+  become: yes
+  connection: ssh
+
+  tasks:
+    - name: Install HTTPD server on CentOS
+      yum:
+        name: httpd
+        state: present
+      notify: restart httpd
+
+  handlers:
+    - name: restart httpd
+      service:
+        name: httpd
+        state: restarted
