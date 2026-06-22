@@ -103,6 +103,10 @@ This creates a trust relationship so Ansible can connect to nodes without asking
 
 ---
 
+# Step 6.1 Important Restart:
+
+sudo service sshd restart
+
 # Step 7: Copy SSH Key to Managed Nodes
 
 Run the following command for each managed node:
