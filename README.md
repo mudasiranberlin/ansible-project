@@ -75,21 +75,8 @@ ansible --version
 
 ---
 
-# Step 5: Create Ansible Configuration Directory
 
-```bash
-sudo mkdir /etc/ansible
-```
-
-Switch to the ansible user:
-
-```bash
-sudo su - ansible
-```
-
----
-
-# Step 6: Generate SSH Key
+# Step 5: Generate SSH Key
 
 Create an SSH key pair:
 
@@ -103,11 +90,11 @@ This creates a trust relationship so Ansible can connect to nodes without asking
 
 ---
 
-# Step 6.1 Important Restart:
+# Step 5.1 Important Restart:
 
 sudo service sshd restart
 
-# Step 7: Copy SSH Key to Managed Nodes
+# Step 6: Copy SSH Key to Managed Nodes
 
 Run the following command for each managed node:
 
@@ -126,6 +113,20 @@ ssh-copy-id ansible@172.31.22.202
 ```
 
 After this, Ansible can connect to the nodes without requiring a password.
+
+---
+
+# Step 7: Create Ansible Configuration Directory
+
+```bash
+sudo mkdir /etc/ansible
+```
+
+Switch to the ansible user:
+
+```bash
+sudo su - ansible
+```
 
 ---
 
