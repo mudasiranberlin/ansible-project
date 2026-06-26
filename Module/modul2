@@ -1,0 +1,14 @@
+--- # Welcome to Mudasir Home
+- hosts: demo
+  user: ansible
+  become: yes
+  connection: ssh
+
+  vars:
+    mudi: httpd
+
+  tasks:
+    - name: install HTTPD on centos 7
+      yum:
+        name: "{{mudi}}"
+        state: absent
