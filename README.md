@@ -46,6 +46,9 @@ Open the Ansible hosts/inventory file:
 
 ```bash
 sudo vi /etc/ansible/hosts
+
+[demo]
+172.1.3.45
 ```
 
 ### Explanation
