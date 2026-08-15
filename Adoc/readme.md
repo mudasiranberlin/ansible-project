@@ -5,11 +5,11 @@ ansible all -a "touch file1"
 
 install tree using Adoc 
 
-ansible all -a "yum install tree -y"
+ansible all -a "sudo yum install tree -y"
 
 install http 
 
-ansible all -a "yum install httpd -y"
+ansible all -a "sudo yum https tree -y"
 
 delete 
 
