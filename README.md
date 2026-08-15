@@ -417,6 +417,19 @@ sudo yum install tree
 
 You can also use Ansible to automate tasks across your nodes.
 
+
+## 18. Now You Can Install ansible user
+
+At this point, the `ansible` user has `sudo` permission, and the Ansible server has SSH access to the node.
+
+You can now install packages and manage the node using commands such as:
+
+```bash
+pip3 install ansible --user
+```
+
+You can also use Ansible to automate tasks across your nodes.
+
 ---
 
 # Overall Flow
