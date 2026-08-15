@@ -8,3 +8,56 @@ ansible demo -b -m yum -a "pkg=tree state=absent"
 
 update using the Module file 
 
+ansible demo -b -m yum -a "pkg=httpd state=latest"
+
+start httpd service
+
+ansible demo -b -m service -a "name=httpd state=started"
+
+check status
+
+status httpd.service
+
+create a new user 
+
+ansible demo -b -m user -a "name=mudasir"
+
+check 
+
+ cat /etc/passwd
+
+
+create file and then copy and paste to node 
+touch file
+
+ansible demo -b -m copy -a "src=file dest=/tmp"
+
+
+also this way u can do 
+
+ansible demo[0] -b -m copy -a "src=file dest=/tmp"
+
+check 
+ls /tmp/
+
+
+import setup i will will check the s/w is present there or not 
+
+ansible demo -m setup
+
+
+check using the ip address  filter 
+
+ansible demo -m setup -a "filter=*ipv4*"
+
+
+
+---
+# task
+- hosts: demo
+  user: ansible
+  become: yes
+  connection: ssh
+  tasks:
+    - name: Install HTTPD on centos 7
+      action: yum name=httpd state=present
