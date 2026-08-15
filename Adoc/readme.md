@@ -13,7 +13,12 @@ ansible all -a "sudo yum https tree -y"
 
 delete 
 
-ansible all -a "yum remove tree -y"
+ansible all -a "sudo yum remove tree -y"
+
+
+without using the sudo  use - ba
+
+ansible all -ba "yum install tree -y"
 
 install for paticular group 
 
